@@ -10,7 +10,7 @@
     * [`@RequestMapping`](https://github.com/get-set/get-spring-started/blob/master/rest-service/src/main/java/hello/GreetingController.java#L16)用于将请求路径映射到具体的Controller方法；
     * [`@RequestParam`](https://github.com/get-set/get-spring-started/blob/master/rest-service/src/main/java/hello/GreetingController.java#L17)用于将请求中的参数与方法中的参数进行对应，并可进行设置默认值等操作。不加的话，默认按字符串匹配；
     * [`@RestController`](https://github.com/get-set/get-spring-started/blob/master/rest-service/src/main/java/hello/GreetingController.java#L10) 是 @Controller 和 @RequestBody 的组合体。
-* [`@SpringBootApplication`](https://github.com/get-set/get-spring-started/blob/master/rest-service/src/main/java/hello/Application.java#L6) 是如下几个注解的组合：
+* [`@SpringBootApplication`](https://github.com/get-set/get-spring-started/blob/master/rest-service/src/main/java/hello/Application.java#L7) 是如下几个注解的组合：
     * `@Configuration`，表明该 class 是用于定义 application context 的；
     * `@EnableAutoConfiguration`，使得 SpringBoot 能够基于 classpath 设置来加载 bean，
       以及相关的设置。比如，如果 spring-mvc 在 classpath 中，那么会自动配置为 web 项目，
@@ -18,4 +18,10 @@
     * `@ComponentScan`，让 SpringBoot 在其所在的包及以下子包中查找 configuration、
       component、service 和 controller。
 
+### Scheduling Tasks
+
+[![](https://img.shields.io/static/v1?label=doc&message=Scheduling%20Tasks&color=green)](https://spring.io/guides/gs/rest-service/)
+
+* [`@Scheduled`](https://github.com/get-set/get-spring-started/blob/master/rest-service/src/main/java/hello/ScheduledTask.java#L17)用于指定需要定时执行的方法。
+* [`@EnableScheduling`](https://github.com/get-set/get-spring-started/blob/master/rest-service/src/main/java/hello/Application.java#L8)创建后台的任务执行器，方能定时执行任务。
 
